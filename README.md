@@ -54,10 +54,23 @@ If you want to package the app into a downloadable Windows executable:
 
 ```powershell
 py -m pip install pyinstaller
-pyinstaller --onefile --noconsole app.py
+py -m PyInstaller --clean -y app.spec
 ```
 
 The output executable will be created in the `dist` folder.
+
+### Auto rebuild when `app.py` changes
+You can also run a watcher that rebuilds the EXE automatically whenever [app.py](app.py) is updated:
+
+```powershell
+py .\scripts\auto_build_exe.py
+```
+
+Or launch the batch helper:
+
+```powershell
+.\scripts\build_exe.bat
+```
 
 ## Notes for GitHub users
 When this project is shared on GitHub, users can:
