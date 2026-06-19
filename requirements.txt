@@ -1,0 +1,5 @@
+# Base desktop app dependencies
+# Tkinter is included with standard Python on Windows.
+
+# Optional: used when packaging the app into an executable.
+pyinstaller
